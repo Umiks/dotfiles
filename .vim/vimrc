@@ -131,5 +131,9 @@ map ,o :25vs<CR>:E<CR>iii
 " TODO:
 " запилить переключение между табами на Ctrl+стрелки (стандартно - в режиме команды gt и gT)
 
+" Меняем курсор для режима ввода http://vim.wikia.com/wiki/Change_cursor_shape_in_different_modes
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 map > <C-W>>
 map < <C-W><
