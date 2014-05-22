@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/place/home/evgenjion/wc2/report/templates/YxWeb/web3/blocks-common/more'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/place/home/evgenjion/w6/web3/configs'
+let g:netrw_dirhist_2='/place/home/evgenjion/w6/web3/configs/development'
+let g:netrw_dirhist_3='/place/home/evgenjion'
