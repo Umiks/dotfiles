@@ -3,6 +3,7 @@ PATH=/usr/local/bin:/usr/local/sbin:$PATH
 #git autocomplete
 source ~/dotfiles/git-completion.bash
 
+alias ssl="ssh leon13.yandex.ru"
 alias ssh="ssh -A"
 alias vi="vim"
 alias l="ls"
@@ -26,13 +27,15 @@ alias tstatic="rm pages-desktop/search/_search.less.css && touch pages-desktop/s
 alias fdx="git clean -fdx && gmake -Bj10"
 
 # git aliases
+alias g="git"
 alias gb="git branch"
 alias gbr="gb"
-alias gd="git diff HEAD"
 alias gdh="git diff HEAD~"
 alias gco="git checkout"
 alias gcob="git chechout -b"
 alias gst="git status"
+alias glol="git lol"
+alias gdiff="git diff"
 
 unset LC_ALL
 export LANG=C
