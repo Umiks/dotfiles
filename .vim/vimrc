@@ -122,6 +122,8 @@ map ю .
 """"""" Мои горячие клавиши:
 
 map <F2> :w <CR>
+map <F4> :q <CR>
+
 map ,so :syntax on<CR>
 map ,sf :syntax off<CR>
 
