@@ -54,16 +54,15 @@ export LC_IDENTIFICATION="ru_RU.UTF-8"
 
 
 function log() {
-    betaPath="/var/tmp/evgenjion-d-$1.serp3.leon13.yandex" 
-    domain=$2
-    if [ -z $domain ]; then # проверка на пустую строку
-        echo "default domain – ru"
-        betaPath="$betaPath.ru.log"
-    else
-        echo $domain
-        betaPath="$betaPath.$domain.log"
-    fi
+    local wcName=${1-`pwd`} # первый параметр, либо путь к текущей дирректории
+    local username=`whoami`
 
+    wcName=`sed "s/.*\($username\)\/\(.\{1,\}\)\/.*/\2/g" <<< "$wcName"` # вырезаем имя рабочей копии из пути
+
+    local domain=${2-'ru'}
+    betaPath="/var/tmp/$username-d-$wcName.serp3.leon13.yandex.$domain.log"
+
+    echo "logging $betaPath..."
     tail -f $betaPath #смотрим логи
 }
 
@@ -87,6 +86,13 @@ function rebuild() {
     echo "building $projectName..."
     build "$projectName"
 }
+
+# функция для работы с проектами
+function prj() {
+    _cmd=$1
+    echo `defVal 1 2`
+}
+
 
 #source ~/.dotfiles/.bash_profile
 
