@@ -123,6 +123,7 @@ map ю .
 
 map <F2> :w <CR>
 map <F4> :q <CR>
+map <F5> <ESC><C-W><C-W>
 
 map ,so :syntax on<CR>
 map ,sf :syntax off<CR>
