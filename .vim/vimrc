@@ -1,10 +1,76 @@
 set nocompatible
 
-call pathogen#runtime_append_all_bundles()
-
 filetype on
 filetype plugin on
 filetype indent on
+
+
+
+
+
+
+
+
+"""""""""""""""VUNDLE CONFIGS START""""""""""""""""""""""""""""
+
+
+
+"filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdcommenter'
+
+Plugin 'altercation/vim-colors-solarized'
+
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+Bundle "honza/vim-snippets"
+
+Plugin 'pangloss/vim-javascript'
+
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+
+
+
+
+
+
+
+"""""""""""""""VUNDLE CONFIGS END""""""""""""""""""""""""""""
+
+
 
 set autoread
 
@@ -20,7 +86,7 @@ set shiftwidth=4
 set expandtab
 set ruler
 set cursorline
-set paste "для режима "вставки"
+"set paste "для режима "вставки"
 
 set showmatch
 set hlsearch
@@ -52,7 +118,7 @@ set scrolloff=3
 
 set synmaxcol=1000
 
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
 
 set background=light
 colorscheme solarized
@@ -129,7 +195,8 @@ map ,so :syntax on<CR>
 map ,sf :syntax off<CR>
 
 " Открыть дерево проекта
-map ,o :25vs<CR>:E<CR>iii
+"map ,o :25vs<CR>:E<CR>iii
+map ,o :NERDTree<CR>
 
 " TODO:
 " запилить переключение между табами на Ctrl+стрелки (стандартно - в режиме команды gt и gT)
