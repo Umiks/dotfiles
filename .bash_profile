@@ -36,6 +36,7 @@ alias gcob="git chechout -b"
 alias gst="git status"
 alias glol="git lol"
 alias gdiff="git diff"
+alias gadd="git add"
 
 unset LC_ALL
 export LANG=C
@@ -90,7 +91,6 @@ function rebuild() {
 # функция для работы с проектами
 function prj() {
     _cmd=$1
-    echo `defVal 1 2`
 }
 
 

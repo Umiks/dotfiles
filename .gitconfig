@@ -11,6 +11,8 @@
     cob = checkout -b
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     hist = log --pretty=format:'%C(yellow)%h%C(reset) %ad | %C(75)%s%C(reset) %C(yellow)%d%C(reset) [%an]' --graph --date=short --branches --all
+    # shows, which merge commit was added commit
+    which = !git show `git rev-list --ancestry-path "$1"..dev --merges | tail -1`
 [color]
     #branch = auto
     grep = auto
