@@ -3,19 +3,30 @@ snippet desb
 	describeBlock('${1:blockName}', function(block) {
 		${2:// Tests goes here...}
 	});
+snippet desc
+	describe('${1}', function() {
+		${2:// Tests goes here...}
+	});
 snippet it
-	it ('${1}', function() {
+	it('${1}', function() {
 		${2}
 	});
 snippet bef
 	beforeEach(function() {
 		${1: // init...}
 	});
+snippet aft
+	afterEach(function() {
+		${1: // init...}
+	});
 snippet stb
 	stubBlocks('${1:block__elem}');
 snippet std
 	stubData('${1:cgi}');
-
+snippet log
+	console.log(${1});
+snippet flag
+	data.expFlags.${1}
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =
