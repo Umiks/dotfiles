@@ -1,4 +1,5 @@
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH=":/usr/local/mysql/support-files:/usr/local/mysql/bin:$PATH"
 
 #git autocomplete
 source ~/dotfiles/git-completion.bash
@@ -49,7 +50,6 @@ export LC_ADDRESS="ru_RU.UTF-8"
 export LC_TELEPHONE="ru_RU.UTF-8"
 export LC_MEASUREMENT="ru_RU.UTF-8"
 export LC_IDENTIFICATION="ru_RU.UTF-8"
-
 
 function log() {
     local wcName=${1-`pwd`} # первый параметр, либо путь к текущей дирректории
