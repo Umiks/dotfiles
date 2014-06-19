@@ -62,13 +62,8 @@ filetype plugin indent on    " required
 
 
 
-
-
-
-
-
-
 """""""""""""""VUNDLE CONFIGS END""""""""""""""""""""""""""""
+
 
 
 
@@ -185,6 +180,14 @@ map ь m
 map б ,
 map ю .
 
+
+
+"Plugins configs
+let NERDTreeShowHidden=1
+
+
+
+
 """"""" Мои горячие клавиши:
 
 map <F2> :w <CR>
@@ -196,7 +199,7 @@ map ,sf :syntax off<CR>
 
 " Открыть дерево проекта
 "map ,o :25vs<CR>:E<CR>iii
-map ,o :NERDTree<CR>
+map ,o :NERDTreeToggle<CR>
 
 " TODO:
 " запилить переключение между табами на Ctrl+стрелки (стандартно - в режиме команды gt и gT)

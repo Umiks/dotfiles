@@ -19,12 +19,9 @@ alias branchRebase="git fetch --all && git rebase upstream/dev"
 alias betaRebase="branchRebase"
 alias makeFork="git remote rename origin upstream && git remote add origin git@github.yandex-team.ru:evgenjion/web3.git"
 
-# точечная сборка
-alias tpriv="gmake pages-desktop/search/all/_all.priv.js -j8"
-alias tstatic="rm pages-desktop/search/_search.less.css && touch pages-desktop/search/search.deps.js && gmake pages-desktop/search/_search.less.css -j8"
-
-# полная пересборка
+# Про сборку
 alias fdx="git clean -fdx && gmake -Bj10"
+alias gtest="gmake priv-test"
 
 # git aliases
 alias g="git"
