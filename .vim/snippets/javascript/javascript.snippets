@@ -1,4 +1,6 @@
-#My snippets
+##My snippets
+
+#Tests
 snippet desb
 	describeBlock('${1:blockName}', function(block) {
 		${2:// Tests goes here...}
@@ -23,10 +25,17 @@ snippet stb
 	stubBlocks('${1:block__elem}');
 snippet std
 	stubData('${1:cgi}');
+
+#common
 snippet log
 	console.log(${1});
 snippet flag
 	data.expFlags.${1}
+
+#Ya.snp
+snippet blocks
+	blocks['#{1}']
+
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =

@@ -186,8 +186,6 @@ map ю .
 let NERDTreeShowHidden=1
 
 
-
-
 """"""" Мои горячие клавиши:
 
 map <F2> :w <CR>
