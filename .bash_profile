@@ -5,6 +5,7 @@ PATH=":/usr/local/mysql/support-files:/usr/local/mysql/bin:$PATH"
 source ~/dotfiles/git-completion.bash
 
 alias ssl="ssh leon13.yandex.ru"
+alias ssk="ssh kitty.serp.yandex.ru"
 alias ssh="ssh -A"
 alias vi="vim"
 alias l="ls"
@@ -63,6 +64,11 @@ function log() {
 
     echo "logging $betaPath..."
     tail -f $betaPath #смотрим логи
+}
+
+function up() {
+    local fileList=`git status -s`
+    echo $fileList
 }
 
 function build() {
