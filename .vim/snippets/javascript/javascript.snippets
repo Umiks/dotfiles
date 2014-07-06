@@ -39,9 +39,51 @@ snippet {
 	{${1}}
 snippet [
 	[${1}]
+
 #Ya.snp
 snippet blocks
-	blocks['#{1}']
+	blocks['${1:block}']
+
+snippet i18n-simple
+	BEM.I18N('${1:project}', '${2:text}')
+
+snippet i18n-sprintf
+	BEM.I18N('${1:project}', '${2:text}', {
+		${3:param}: ${4:value},
+		context: '${5}'
+	})
+
+#BEM snippets:
+snippet bem-block
+	{
+		block: '${1:block}',
+		content: ${2}
+	}
+
+snippet bem-elem
+	{
+		elem: '${1:elem}',
+		content: ${2}
+	}
+
+snippet bem-block__elem
+	{
+		block: '${1:block}',
+		elem: '${2:elem}',
+		content: ${3}
+	}
+
+snippet bem-dom-decl
+	BEM.DOM.decl('${1:block}', {
+		onSetMod: {
+			js: function() {
+				${2: // body}
+			}
+		}
+	});
+
+snippet bem-dom-update
+	BEM.DOM.update(${1:this.domElem}, ${2:$(data.html).html()});
 
 # Prototype
 snippet proto
