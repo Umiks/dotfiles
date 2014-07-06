@@ -34,15 +34,10 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
-Bundle "honza/vim-snippets"
+"vim zencoding:
+Plugin 'mattn/emmet-vim.git'
 
-Plugin 'pangloss/vim-javascript'
-
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
+let g:user_emmet_expandabbr_key = '<TAB>'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,8 +53,6 @@ filetype plugin indent on    " required
 " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 
 
 """""""""""""""VUNDLE CONFIGS END""""""""""""""""""""""""""""
@@ -121,7 +114,7 @@ colorscheme solarized
 let g:airline_theme='light'
 
 set t_Co=256
-syntax off "чтобы не было глюков при правке собраных js файлов в 10к+ строк
+syntax on "чтобы не было глюков при правке собраных js файлов в 10к+ строк
 
 set linebreak
 set pastetoggle=<F3>
