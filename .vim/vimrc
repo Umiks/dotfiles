@@ -185,7 +185,8 @@ map <F2> :w <CR>
 map <F4> :q <CR>
 map <F5> <ESC><C-W><C-W>
 
-imap <F2> <ESC>:w <CR> i "хоткеи для режима ввода
+"хоткеи для режима ввода
+imap <F2> <ESC>:w <CR> i
 imap <F4> <ESC>:q <CR>
 
 map ,so :syntax on<CR>
