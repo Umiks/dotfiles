@@ -1,12 +1,14 @@
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
 PATH=":/usr/local/mysql/support-files:/usr/local/mysql/bin:$PATH"
+PATH="$HOME/serp-tools:$PATH"
 
 #git autocomplete
 source ~/dotfiles/git-completion.bash
 
+alias ssh="ssh -A"
 alias ssl="ssh leon13.yandex.ru"
 alias ssk="ssh kitty.serp.yandex.ru"
-alias ssh="ssh -A"
+alias sss="ssh simf.serp.yandex.ru"
 alias vi="vim"
 alias l="ls"
 alias la="ls -la"
@@ -25,6 +27,7 @@ alias makeFork="git remote rename origin upstream && git remote add origin git@g
 # Про сборку
 alias fdx="git clean -fdx && gmake -Bj10"
 alias gtest="gmake priv-test"
+alias emake="enb make"
 
 # git aliases
 alias g="git"
