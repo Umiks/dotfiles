@@ -108,10 +108,10 @@ set synmaxcol=1000
 
 "call pathogen#runtime_append_all_bundles()
 
-set background=light
+set background=dark
 colorscheme solarized
 
-let g:airline_theme='light'
+let g:airline_theme='dark'
 
 set t_Co=256
 syntax on "чтобы не было глюков при правке собраных js файлов в 10к+ строк
