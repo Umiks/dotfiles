@@ -34,9 +34,6 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
-"bemhtml plugin
-Bundle 'SevInf/vim-bemhtml'
-
 "vim zencoding:
 Plugin 'mattn/emmet-vim.git'
 
@@ -59,7 +56,6 @@ filetype plugin indent on    " required
 
 
 """""""""""""""VUNDLE CONFIGS END""""""""""""""""""""""""""""
-
 
 
 
