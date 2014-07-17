@@ -97,7 +97,27 @@ function rebuild() {
 
 # функция для работы с проектами
 function prj() {
-    _cmd=$1
+    local _cmd=$1
+    local _projectName=${2-'web3'}
+
+    if [[ $_cmd = "rm" ]]; then
+        echo "removing $_projectName..."
+        rm -rf "$_projectName/" && rm "$_projectName" # удаляем проект и симлинку
+    elif [[ $_cmd = "build" ]]; then
+        echo "building $_projectName..."
+        build $_projectName
+    elif [[ $_cmd = "change" ]]; then
+
+        echo $3
+        if [[ -z $3 ]]; then
+            echo "cannot change without 3 parameter"
+            echo "usage: prj change web_touch_phone web3"
+        else
+            prj rm "$_projectName" && prj build $3
+        fi
+    elif [[ $_cmd = "rebuild" ]]; then
+        rebuild $_projectName
+    fi
 }
 
 
