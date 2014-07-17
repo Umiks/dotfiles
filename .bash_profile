@@ -29,6 +29,13 @@ alias fdx="git clean -fdx && gmake -Bj10"
 alias gtest="gmake priv-test"
 alias emake="enb make"
 
+if [[ `which gmake` != '' ]]; then
+    alias make='gmake'
+else
+    alias gmake='make'
+fi
+
+
 # git aliases
 alias g="git"
 alias gb="git branch"
