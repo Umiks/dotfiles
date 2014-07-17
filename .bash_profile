@@ -15,6 +15,7 @@ alias la="ls -la"
 alias cdp="cd pages-desktop/search/all"
 alias tdp="cd pages-touch-phone/search/all"
 alias vp="vim pages-desktop/search/all/_all.priv.js"
+alias vtp="vim pages-touch-phone/search/all/_all.priv.js"
 alias cdb="cd ../../.."
 alias bup=". ~/.bash_profile"
 alias sedit="vim ~/.vim/snippets/javascript/javascript.snippets"
@@ -23,6 +24,7 @@ alias bedit="vim ~/.bash_profile"
 alias branchRebase="git fetch --all && git rebase upstream/dev"
 alias betaRebase="branchRebase"
 alias makeFork="git remote rename origin upstream && git remote add origin git@github.yandex-team.ru:evgenjion/web3.git"
+alias makeWorkCopy="/hol/arkanavt/report/scripts/dev/yreport -e development"
 
 # Про сборку
 alias fdx="git clean -fdx && gmake -Bj10"
@@ -70,7 +72,7 @@ function log() {
     wcName=`sed "s/.*\($username\)\/\(.\{1,\}\)\/.*/\2/g" <<< "$wcName"` # вырезаем имя рабочей копии из пути
 
     local domain=${2-'ru'}
-    betaPath="/var/tmp/$username-d-$wcName.serp3.leon13.yandex.$domain.log"
+    betaPath="/var/tmp/$username-d-$wcName.simf.serp.yandex.$domain.log"
 
     echo "logging $betaPath..."
     tail -f $betaPath #смотрим логи
