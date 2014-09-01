@@ -1,21 +1,10 @@
 set nocompatible
 
-filetype on
-filetype plugin on
-filetype indent on
-
-
-
-
-
-
 
 
 """""""""""""""VUNDLE CONFIGS START""""""""""""""""""""""""""""
 
-
-
-"filetype off                  " required
+filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -25,17 +14,22 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 
+"nerd plugins
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'altercation/vim-colors-solarized'
 
+"Snippet support
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
 "vim zencoding:
 Plugin 'mattn/emmet-vim.git'
+
+"lang support:
+Plugin 'groenewege/vim-less'
 
 let g:user_emmet_expandabbr_key = '<F3>' "CTRL+comma
 
@@ -57,7 +51,11 @@ filetype plugin indent on    " required
 
 """""""""""""""VUNDLE CONFIGS END""""""""""""""""""""""""""""
 
+filetype on
+filetype plugin on
+filetype indent on
 
+let mapleader = ","
 
 set autoread
 
@@ -194,6 +192,10 @@ map ,sf :syntax off<CR>
 " Открыть дерево проекта
 "map ,o :25vs<CR>:E<CR>iii
 map ,o :NERDTreeToggle<CR>
+
+"Скомпилять .less в .css
+nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
+
 
 " TODO:
 " запилить переключение между табами на Ctrl+стрелки (стандартно - в режиме команды gt и gT)
